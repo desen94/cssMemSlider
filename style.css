@@ -102,6 +102,7 @@ h1 {
     grid-area: 2/1/3/2;
     list-style: none;
     padding: 0;
+    margin: 0;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
@@ -145,6 +146,7 @@ h1 {
     border: 1px solid #999;
     background-color: #efefe8;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .s-wrap .s-control > label[class^=s-c-]:not(:last-child) {
@@ -157,6 +159,10 @@ h1 {
     }
 }
 
+.s-wrap .s-control > label[class^=s-c-]:active {
+    background-color: dodgerblue;
+}
+
 .s-wrap .s-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -167,10 +173,13 @@ h1 {
 }
 
 .s-wrap .s-nav label {
-    display: none;
+    display: block;
+    pointer-events: none;
     margin: 0 20px;
     padding: 5px 10px;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .s-wrap .s-nav label::before, .s-wrap .s-nav label::after {
@@ -227,6 +236,10 @@ h1 {
     background-color: #333;
 }
 
+.s-wrap #s-1:checked ~ .s-control .s-c-1:active {
+    background-color: dodgerblue;
+}
+
 @media (any-hover: hover) {
     .s-wrap #s-1:checked ~ .s-control .s-c-1:hover {
         border: 1px solid #fff;
@@ -234,7 +247,8 @@ h1 {
 }
 
 .s-wrap #s-1:checked ~ .s-nav .s-nav-1 {
-    display: block;
+    opacity: 100;
+    pointer-events: auto;
 }
 
 .s-wrap #s-1:checked ~ .s-content-name .s-item-name-1 {
@@ -256,6 +270,10 @@ h1 {
     background-color: #333;
 }
 
+.s-wrap #s-2:checked ~ .s-control .s-c-2:active {
+    background-color: dodgerblue;
+}
+
 @media (any-hover: hover) {
     .s-wrap #s-2:checked ~ .s-control .s-c-2:hover {
         border: 1px solid #fff;
@@ -263,7 +281,8 @@ h1 {
 }
 
 .s-wrap #s-2:checked ~ .s-nav .s-nav-2 {
-    display: block;
+    opacity: 100;
+    pointer-events: auto;
 }
 
 .s-wrap #s-2:checked ~ .s-content-name .s-item-name-2 {
@@ -285,6 +304,10 @@ h1 {
     background-color: #333;
 }
 
+.s-wrap #s-3:checked ~ .s-control .s-c-3:active {
+    background-color: dodgerblue;
+}
+
 @media (any-hover: hover) {
     .s-wrap #s-3:checked ~ .s-control .s-c-3:hover {
         border: 1px solid #fff;
@@ -292,7 +315,8 @@ h1 {
 }
 
 .s-wrap #s-3:checked ~ .s-nav .s-nav-3 {
-    display: block;
+    opacity: 100;
+    pointer-events: auto;
 }
 
 .s-wrap #s-3:checked ~ .s-content-name .s-item-name-3 {
@@ -314,6 +338,10 @@ h1 {
     background-color: #333;
 }
 
+.s-wrap #s-4:checked ~ .s-control .s-c-4:active {
+    background-color: dodgerblue;
+}
+
 @media (any-hover: hover) {
     .s-wrap #s-4:checked ~ .s-control .s-c-4:hover {
         border: 1px solid #fff;
@@ -321,7 +349,8 @@ h1 {
 }
 
 .s-wrap #s-4:checked ~ .s-nav .s-nav-4 {
-    display: block;
+    opacity: 100;
+    pointer-events: auto;
 }
 
 .s-wrap #s-4:checked ~ .s-content-name .s-item-name-4 {
@@ -343,6 +372,10 @@ h1 {
     background-color: #333;
 }
 
+.s-wrap #s-5:checked ~ .s-control .s-c-5:active {
+    background-color: dodgerblue;
+}
+
 @media (any-hover: hover) {
     .s-wrap #s-5:checked ~ .s-control .s-c-5:hover {
         border: 1px solid #fff;
@@ -350,7 +383,8 @@ h1 {
 }
 
 .s-wrap #s-5:checked ~ .s-nav .s-nav-5 {
-    display: block;
+    opacity: 100;
+    pointer-events: auto;
 }
 
 .s-wrap #s-5:checked ~ .s-content-name .s-item-name-5 {
