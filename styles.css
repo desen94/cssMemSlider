@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1C2325;
+    color: #eee;
+}
+
+h1 {
+    text-align: center;
+}
+
+.wrapper {
+    margin: auto;
+    padding: 0 3rem;
+}
+
